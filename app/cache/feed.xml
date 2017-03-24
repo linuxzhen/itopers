@@ -1,0 +1,11 @@
+a:3:{s:4:"time";i:1490307218;s:3:"ttl";i:86400;s:4:"data";s:539:"<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><?=$site['title']?></title>
+        <description><?=$site['description']?></description>
+        <link><?=$site['url']?></link>
+        <atom:link href="<?=$site['url']?>/feed.xml" rel="self" type="application/rss+xml" />
+        <pubDate><?=date('Y-m-d H:m:s')?></pubDate>
+        <lastBuildDate><?=date('Y-m-d H:m:s')?></lastBuildDate>
+        <generator>Gitblog v1.0</generator>
+            </channel>
+</rss>";}

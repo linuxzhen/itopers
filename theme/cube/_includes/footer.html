@@ -1,0 +1,40 @@
+<footer class="footer">
+    <div class="footer_bottom">
+        <div class="follow-us">
+            <a class="fa fa-github social-icon" href="https://github.com/{{ site.author.github }}"></a>
+            <a class="fa fa-weibo social-icon" href="http://weibo.com/{{ site.author.weibo }}"></a>
+        </div>
+
+        <div class="copy">
+            <p>Copyright &copy; 2015 Gitblog | Proudly powered by <a href="http://www.gitblog.cn/">Gitblog</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<a title="首页" class="fa fa-paper-plane dp-dropplets-icon" href="{{ site.url }}"></a>
+{% if pages > 1 %}
+	{% if pagination.prev %}
+	<a title="上一页" class="fa fa-arrow-left dp-dropplets-icon dp-dropplets-prev" href="{{ pagination.prev.url }}"></a>
+	{% endif %}
+	
+	{% if pagination.next %}
+	<a title="下一页" class="fa fa-arrow-right dp-dropplets-icon dp-dropplets-next" href="{{ pagination.next.url }}"></a>
+	{% endif %}
+{% endif %}
+<script >
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43198935-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

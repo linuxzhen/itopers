@@ -1,0 +1,30 @@
+#GitBlog配置文件，使用4个空格代替Tab
+---
+url: http://www.itopers.com/
+title: IT运维中文博客 
+subtitle: Beebol's & Vaster's Blog
+theme: cube
+enableCache: false
+highlight: true
+mathjax: false
+duoshuo: itopers
+baiduAnalytics:a9985afd3d7495467aaa5cd7316b244b
+keywords: IT运维,数据库运维,Linux,Mysql,python,django
+description: >
+    ITer工作中的积累，学习，分享！！
+version: 2.2
+author:
+    name: beebol
+    email: ww103421245@163.com
+    github: your-github
+    weibo: beebol
+    avatar:
+blog:
+    recentSize: 5
+    pageSize: 16
+    pageBarSize: 5
+    allBlogsForPage: false
+text:
+    title: 介绍
+    intro: >
+          本博客由beebol和vaster共同维护，欢迎你!

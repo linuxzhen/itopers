@@ -1,0 +1,81 @@
+<div class="container">
+    <span class="content-title">{{ blog.title }}</span>
+    <div class="content">
+        <article class="full">
+            <div class="read">
+                <div class="post">
+                    <h2>{{ blog.title }}</h2>
+                    <span style="font-size:14px;">时间:{{ blog.date | date('Y-m-d h:m:s') }} &nbsp;&nbsp;&nbsp;&nbsp; 作者:{{ blog.author }} &nbsp;&nbsp;&nbsp;&nbsp;
+	 标签:{% for tag in blog.tags %}
+           <a href="{{ tag.url }}" rel="tag">{{ tag.name }}</a>
+        {% endfor %}  &nbsp;&nbsp;&nbsp;&nbsp;
+	  分类:{% for category in blog.category %}
+           	<a href="{{ category.url }}" rel="category">{{ category.name }}</a>
+        	{% endfor %}
+		</span>
+                    <p>
+                    	{{ blog.content | raw }}
+                    </p>
+                </div>
+                <div class="meta">
+			<span style="font-size:14px;">时间:{{ blog.date | date('Y-m-d h:m:s') }} &nbsp;&nbsp;&nbsp;&nbsp; 作者:{{ blog.author }} &nbsp;&nbsp;&nbsp;&nbsp;
+         标签:{% for tag in blog.tags %}
+           <a href="{{ tag.url }}" rel="tag">{{ tag.name }}</a>
+        {% endfor %}  &nbsp;&nbsp;&nbsp;&nbsp;
+          分类:{% for category in blog.category %}
+                <a href="{{ category.url }}" rel="category">{{ category.name }}</a>
+                {% endfor %}
+                </span>
+<div class="ds-share" data-thread-key="{{ blog.blogId }}" data-title="{{ blog.title }}" data-images="{{ site.url }}blog/img/random/tb{{ random(20) }}.jpg" data-content="{{ blog.summary | raw }}" data-url="{{ site.url }}{{ blog.siteURL }}">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      	
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+                </div>
+            </div>
+        </article>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- unit1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:940px;height:90px"
+     data-ad-client="ca-pub-4199877952940875"
+     data-ad-slot="8919069141"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        {% if site.duoshuo %}
+		<div class="post-content">
+			<!-- 多说评论框 start -->
+			<div class="ds-thread" data-thread-key="{{ blog.blogId }}" data-title="{{ blog.title }}" data-url="{{ site.url }}{{ blog.siteURL }}"></div>
+			<!-- 多说评论框 end -->
+			<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+			<script type="text/javascript">
+			var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
+			(function() {
+				var ds = document.createElement('script');
+				ds.type = 'text/javascript';ds.async = true;
+				ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+				ds.charset = 'UTF-8';
+				(document.getElementsByTagName('head')[0] 
+				 || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+			</script>
+	        <!-- 多说公共JS代码 end -->
+		</div>
+		{% endif %}
+    </div>
+    <div id="duoshuo"></div>
+</div>
+
+{% include "_includes/footer.html" %}

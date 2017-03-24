@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+#RewriteCond %{HTTP_HOST} ^www.itopers.com [NC]
+RewriteCond %{QUERY_STRING} ^p=.*$
+RewriteRule (.*) http://www.itopers.com:8080$1 [R=permanent,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond $1 !^(index\.php|img|robots\.txt)
+RewriteRule ^(.*)$ /index.php/$1 [L]

@@ -1,0 +1,30 @@
+{% for blog in blogList %}
+<article>
+        {% if not loop.first %}
+	{% if blog.images %}
+	<div class="look" style="background-image: url('{{ blog.images.0 }}');">
+    	<a href="{{ blog.siteURL }}" title="{{ blog.title }}"><!-- {{ blog.title }} --></a>
+    </div>
+      {% else %}
+	<div class="look" style="background-image: url('/blog/img/random/tb{{ random(21) }}.jpg');">
+    	<a href="{{ blog.siteURL }}" title="{{ blog.title }}"><!-- {{ blog.title }} --></a>
+    </div>
+    {% endif %}
+     {% endif %}
+    <div class="read">
+        <div class="excerpt">
+            <h2><a href="{{ blog.siteURL }}" title="{{ blog.title }}">{{ blog.title }}</a></h2>
+            <p></p>
+            <p>{{ blog.summary | raw }}</p>
+            <p></p>
+        </div>
+
+        <div class="meta">
+            <span>{{ blog.date | date("Y-m-d")}}</span>
+            <div class="share">
+                <a class="facebook fa fa-paper-plane" href="{{ blog.siteURL }}#duoshuo" title="add comment"></a>
+            </div>
+        </div>
+    </div>
+</article>
+{% endfor %}
