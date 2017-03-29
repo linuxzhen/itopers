@@ -4,17 +4,13 @@ author: vaster
 date: 2017-03-23 20:43:33
 title: 【工具-Git】Git配置介绍
 tags: git,gitignore,配置
-category: python
+category: 工具
 status: publish
 summary: &nbsp;git有三个配置文件
 -->
 
 
->  
-1. Git的三个配置文件
-2. 过滤条件
-3. 例子
-4. 注意事项
+>  本文主要介绍了git的几个配置文件的写法以及注意事项
 
 #### 1. Git的三个配置文件
 * 线上设置
