@@ -61,7 +61,8 @@ doc/*.txt   # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 * .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的
 * git不会加入空目录，如果需要保留目录，不保留文件（`不需要在上层的.gitignore文件忽略此目录`）
      在目录下创建.gitignore 内容为
-```
+
+```shell
 *
  !.gitignore
 ```
